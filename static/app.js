@@ -13,7 +13,7 @@ var myMap = L.map("map", {
     accessToken: API_KEY
   }).addTo(myMap);
   
-  let url= "https://data.cityofchicago.org/api/views/hec5-y4x5/rows.json?$limit=10000"
+  let url= "https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000";
   d3.json(url).then(function(response) {
   
     console.log(response);
@@ -24,13 +24,13 @@ var myMap = L.map("map", {
       var location = response[i].location;
   
       if (location) {
-        heatArray.push([location.coordinates[1], location.coordinates[0]]);
+        heatArray.push([location.latitude, location.longitude]);
       }
     }
-  
+    console.log(heatArray);
     var heat = L.heatLayer(heatArray, {
       radius: 20,
       blur: 35
     }).addTo(myMap);
-  
+   
   });
