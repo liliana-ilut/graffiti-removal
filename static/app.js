@@ -13,8 +13,8 @@ var myMap = L.map("map", {
     accessToken: API_KEY
   }).addTo(myMap);
   
-  let url= "https://data.cityofchicago.org/api/views/hec5-y4x5/rows.json? "
-  d3.json(url, function(response) {
+  let url= "https://data.cityofchicago.org/api/views/hec5-y4x5/rows.json?$limit=10000"
+  d3.json(url).then(function(response) {
   
     console.log(response);
   
