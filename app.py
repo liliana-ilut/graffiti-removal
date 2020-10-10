@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 # import sqlalchemy stuff
 import sqlalchemy
 from config import password
@@ -18,6 +18,13 @@ engine = create_engine(f'postgresql://postgres:{password}@localhost:5432/graffit
 Base = automap_base()
 Base.prepare(engine, reflect=True)
 
+# @app.route('myroute')
+# def whatever():
+#     session = Session(engine)
+#     results = session.query(graffiti.address).all()
+#     return
+    
+
 
 session = Session(engine)
 
@@ -25,10 +32,15 @@ session = Session(engine)
 app = Flask(__name__)
 # Home Page
 @app.route("/")
+
 def home():
     graffiti = pd.read_sql_query("select * from graffiti limit 100", con=engine)
     graffiti = graffiti.to_dict(orient="record")
     return jsonify(graffiti)
+
+@app.route("/index")
+def index():
+    return render_template('index.html')
     
 if __name__ == "__main__": 
     app.run(debug= True)
