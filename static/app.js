@@ -12,6 +12,8 @@ var myMap = L.map("map", {
     id: "mapbox/streets-v11",
     accessToken: API_KEY
   }).addTo(myMap);
+
+  
   
   let url= "https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000";
   d3.json(url).then(function(response) {
@@ -32,5 +34,7 @@ var myMap = L.map("map", {
       radius: 20,
       blur: 35
     }).addTo(myMap);
+
+  
    
   });
