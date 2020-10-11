@@ -242,3 +242,36 @@ createMap(L.layerGroup(graffitiMarkers));
 
   // Create a layer group made from the bike markers array, pass it into the createMap function
   createMap(L.layerGroup(graffitiMarkers));
+
+
+
+
+  //   function createMarkers(response) {
+
+//     let url= "https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000";
+//   d3.json(url).then(function(response) {
+//     console.log(response);
+  
+//     // Initialize an array to hold bike markers
+//     var graffitiMarkers = [];
+  
+//     // Loop through the stations array
+//     for (var i = 0; index < response.lenght; i++) {
+//       var location = response[i].location;
+//       if (location) {
+//         graffitiMarkers.push([location.latitude, location.longitude]);
+//       }
+  
+//     //   For each station, create a marker and bind a popup with the station's name
+//       var graffitiMarker = L.marker([location.latitude, location.longitude])
+//         .bindPopup("<h3>" + response.address + "<h3><h3>Status: " + response.status + "</h3>");
+  
+//       // Add the marker to the bikeMarkers array
+//       graffitiMarkers.push(graffitiMarker);
+//     }
+
+  
+//     // Create a layer group made from the bike markers array, pass it into the createMap function
+//     createMap(L.layerGroup(graffitiMarkers));
+//   });
+// 

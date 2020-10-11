@@ -1,3 +1,4 @@
+
 // let url= "https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000";
 //   d3.json(url).then(function(response) {
   
@@ -6,11 +7,13 @@ function createMap(graffitiSpot) {
 
     // Create the tile layer that will be the background of our map
     var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-      attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-      maxZoom: 18,
-      id: "light-v10",
-      accessToken: API_KEY
-    });
+        attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+        tileSize: 512,
+        maxZoom: 18,
+        zoomOffset: -1,
+        id: "mapbox/streets-v11",
+        accessToken: API_KEY
+      }).addTo(myMap);
     
     
     // Create a baseMaps object to hold the lightmap layer
@@ -36,13 +39,11 @@ function createMap(graffitiSpot) {
     }).addTo(myMap);
   }
 
-  d3.json("https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000", createMap);
-  
-  function createMarkers(response) {
+    function createMarkers(response) {
 
-    let url= "https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000";
-  d3.json(url).then(function(response) {
-    console.log(response);
+//     let url= "https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000";
+//   d3.json(url).then(function(response) {
+//     console.log(response);
   
     // Initialize an array to hold bike markers
     var graffitiMarkers = [];
@@ -65,5 +66,6 @@ function createMap(graffitiSpot) {
   
     // Create a layer group made from the bike markers array, pass it into the createMap function
     createMap(L.layerGroup(graffitiMarkers));
-  });
-}
+  };
+// 
+  d3.json("https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000", createMap, createMarkers);
