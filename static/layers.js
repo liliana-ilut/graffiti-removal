@@ -119,7 +119,6 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
     // Create a layer group made from the bike markers array, pass it into the createMap function
     createMap(L.layerGroup(graffitiMarkers));
   
-<<<<<<< HEAD
 //     // Create a layer group made from the bike markers array, pass it into the createMap function
 //     createMap(L.layerGroup(graffitiMarkers));
 //   }
@@ -243,5 +242,3 @@ createMap(L.layerGroup(graffitiMarkers));
 
   // Create a layer group made from the bike markers array, pass it into the createMap function
   createMap(L.layerGroup(graffitiMarkers));
-=======
->>>>>>> b9dc6eb201dbe26165c090469601d9cde65a7eab
