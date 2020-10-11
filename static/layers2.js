@@ -39,25 +39,26 @@ function createMap(graffitiSpot) {
     }).addTo(myMap);
   }
 
-    function createMarkers(response) {
+function createMarkers(data) {
 
 //     let url= "https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000";
 //   d3.json(url).then(function(response) {
 //     console.log(response);
-  
+    var locations = data.location;
     // Initialize an array to hold bike markers
     var graffitiMarkers = [];
   
     // Loop through the stations array
-    for (var i = 0; index < response.lenght; i++) {
-      var location = response[i].location;
-      if (location) {
-        graffitiMarkers.push([location.latitude, location.longitude]);
-      }
+    for (var i = 0; i < locations.lenght; i++) {
+      var location = locations[i];
+
+    //   if (location) {
+    //     graffitiMarkers.push([location.latitude, location.longitude]);
+    //   }
   
     //   For each station, create a marker and bind a popup with the station's name
-      var graffitiMarker = L.marker([location.latitude, location.longitude])
-        .bindPopup("<h3>" + response.address + "<h3><h3>Status: " + response.status + "</h3>");
+      var graffitiMarker = L.marker([location.latitude, location.longitude]);
+        // .bindPopup("<h3>" + location.latitude + "<h3><h3>Status: " + location.longitude + "</h3>");
   
       // Add the marker to the bikeMarkers array
       graffitiMarkers.push(graffitiMarker);
@@ -68,4 +69,4 @@ function createMap(graffitiSpot) {
     createMap(L.layerGroup(graffitiMarkers));
   };
 // 
-  d3.json("https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000", createMap, createMarkers);
+  d3.json("https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000", createMarkers);
