@@ -10,10 +10,20 @@
   }
    */
 
-html,
+/* html,
 body,
 #map{
   height: 100%;
   padding: 0;
   margin: 0;
+} */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#map,
+body,
+html {
+  height: 100%;
 }
