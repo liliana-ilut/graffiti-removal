@@ -53,10 +53,10 @@ def home():
         <a href="/api" class="btn" role="button" aria-pressed="true"><strong>API</strong></a>
       </div>
           <div class="col-4" style="background-color: rgb(124, 132, 240)">
-            <a href="/maps" class="btn" role="button" aria-pressed="true"><strong>Maps</strong></a>
+            <a href="/clustermap" class="btn" role="button" aria-pressed="true"><strong>Cluster Map</strong></a>
           </div>
           <div class="col-4" style="background-color: rgb(124, 132, 240)">
-            <a href="/maps" class="btn" role="button" aria-pressed="true"><strong>Charts</strong></a>
+            <a href="/heatmap" class="btn" role="button" aria-pressed="true"><strong>Heat Map</strong></a>
           </div>
 
     
@@ -100,13 +100,13 @@ def home():
  #API Page
 @app.route("/api")
 def api():
-    graffiti = pd.read_sql_query("select * from graffiti", con=engine)
+    graffiti = pd.read_sql_query("select * from graffiti limit 10000", con=engine)
     graffiti = graffiti.to_dict(orient="record")
     return jsonify(graffiti)
 
 
 
-@app.route("/maps")
+@app.route("/clustermap")
 def index():
   return """<!DOCTYPE html>
 <html lang="en-us">
@@ -153,6 +153,55 @@ def index():
 """
     # return render_template('index.html')
 
+@app.route("/heatmap")
+def heatmap():
+  return """
+  <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Graffiti Removal</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+
+    <!-- Marker Cluster CSS -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+  </head>
+  <body>
+
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- d3 JS -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Marker Cluster JS
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script> -->
+
+    <!-- Our JS -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <script type="text/javascript" src="static/js/leaflet-heat.js"></script> 
+    <script type="text/javascript" src="static/js/heatmap.js"></script>
+    
+    
+
+  </body>
+</html>
+
+
+
+"""
     
 if __name__ == "__main__": 
     app.run(debug= True)
