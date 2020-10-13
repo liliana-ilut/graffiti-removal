@@ -30,17 +30,23 @@ d3.json(url).then(function(response) {
 
   // Loop through data
   for (var i = 0; i < response.length; i++) {
+    
+    
 
     // Set the data location property to a variable
     var location = response[i].location;
+   
 
     // Check for location property
     if (location) {
+      var locationString = "Latitude: " + location.latitude + ", Longitude:" + location.longitude;
+      
+  
 
       // Add a new marker to the cluster group and bind a pop-up
       markers.addLayer(L.marker([location.latitude, location.longitude])
-        .bindPopup(response[i].location));
-        console.log(response[i].location)
+        .bindPopup(locationString));
+      //console.log(response[i].location)
     }
 
   }
