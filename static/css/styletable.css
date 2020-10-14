@@ -1,45 +1,46 @@
 /* picture image source https://www.bombingscience.com/graffiti-pictures/city/chicago/artist/meeting-of-styles-2014 */
+/* https://www.graffitiremovalindetroit.com/before-after/ */
 
-* {
-    box-sizing: border-box;
-    font-family: Ubuntu, sans-serif;
-  }
-  .h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  html,
-  body {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Make button more visible */
+/* /* Import fonts */
+/* @import url('https://fonts.googleapis.com/css?family=Space+Mono:700'); */
+/* @import url('https://fonts.googleapis.com/css?family=Lato'); */
+/* @import url('https://fonts.googleapis.com/css?family=Michroma'); */
+/* @import url('https://fonts.googleapis.com/css?family=Karla'); */
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(64, 91, 211);
+}
+
+*{
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+ 
+}
+
+/* Make buttons more visible */
   .btn{
-    background-color: rgb(214, 112, 29);
-    position: center;
-    text-align-last: right;
-    /* right : 50px;
-    left: 40px; */
+    background-color: rgba(97, 141, 27, 0.322); 
   }
-  
-  
+
+  @keyframes bounce {
+    from { transform: translate3d(0, -50px, 0);     }
+    to   { transform: translate3d(0, 0px, 0); }
+  }
+  /* div .navbar{
+    background-color: black !important; 
+    border-bottom-style: groove; 
+    border-bottom-color: #618D1B; 
+  } */
   /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
   .wrapper {
     position: relative;
     min-height: 100%;
     padding-bottom: 130px;
     overflow: auto;
-  }
-  
-  /* The footer is positioned at the bottom of the page */
-  .footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    min-height: 100px;
-    background: #4e5d6c;
   }
   
   /* The code styles the text at the bottom of the footer */
@@ -49,27 +50,42 @@
     bottom: 0;
     left: 0;
     padding: 5px;
-    background: #1b3146;
+    border-top-style: groove; 
+    border-top-color: #618D1B; 
+    font-size: 2rem;
   }
-  
+   */
   .navbar {
     padding: 5px;
     margin: 0;
+
+
   }
   
-  /* This CSS styles the ufo icon in the navbar
-  .nav-ufo {
-    position: absolute;
-    bottom: 5px;
-    left: 150px;
-    width: 35px;
-    color: white;
-  } */
+div .panel{
+  border-style: groove; 
+  border-color: #618D1B; 
+}
+
+div .panel-heading{
+  background-color: black !important; 
+  border-bottom-style: groove !important; 
+  border-bottom-color: #618D1B !important; 
+}
+div .panel-body{
+  background-color: black !important; 
+}
+
+ul #filters{
+  background-color: black !important; 
+}
   
-  /* Adding styles to the aside and filter form
+  /* Adding styles to the aside and filter form */
   .ufo-form {
     margin-top: 50px;
-  } */
+
+
+  }
   
   .filters .panel-body {
     padding: 0;
@@ -83,14 +99,12 @@
     display: block;
     width: 100%;
     padding: 8px;
-    color: #e740f3;
+    color: #8e979f;
     outline: none;
   }
   
   #table-area th {
     text-align: center;
-    background-color: #f0481d1c;
-    color: white;
   }
   
   #table-area th:first-child,
@@ -113,11 +127,12 @@
     height: 550px;
     padding: 20px;
     margin: 0;
-    background: rgb(216, 11, 11);
-    background-image: url("../img/before_after.jpg");
+    background: black;
+    background-image: url("../img/lovechicago.jpg");
     background-attachment: fixed;
     background-position: bottom center;
     background-size: cover;
+
   }
   
   .hero h1 {
@@ -154,12 +169,22 @@
     color: #8e979f;
   }
   
+
+  table{
+    border-style: groove; 
+    border-color: #618D1B; 
+  }
   /* media queries which will only be activated at specific screen sizes */
   @media (max-width: 800px) {
     #table-area td {
       font-size: 1em;
     }
   }
+
+  
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #1F2D09; 
+}
   
   @media (max-width: 500px) {
     #table-area thead {
@@ -169,7 +194,7 @@
     #table-area tr td:first-child {
       font-size: 1.8em;
       font-weight: bold;
-      background: #8ecf24;
+      background: #1b3146;
     }
   
     #table-area tr td:last-child {
@@ -182,7 +207,8 @@
       height: 1px;
       margin-top: 20px;
       content: " ";
-      background: rgb(109, 113, 117);
+      background: aliceblue;
+
     }
   
     #table-area td {
@@ -194,12 +220,14 @@
       text-align: center;
     }
   
+
     #table-area tbody td::before {
       display: block;
       font-size: 1.4em;
       font-weight: bold;
       text-align: center;
       content: attr(data-th);
+
     }
   
     .hero h1 {
@@ -239,4 +267,3 @@
       opacity: 1;
     }
   }
-  
