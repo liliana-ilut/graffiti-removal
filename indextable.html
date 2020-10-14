@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/styletable.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
     </nav>
     <div class="hero text-center">
       <h1 style = "font-family: 'Ubuntu', sans-serif; text-shadow: 1px 1px 2px black, 0 0 25px whitesmoke, 0 0 5px #000066;">Graffiti</h1>
-      <p style = "color: #000066; text-shadow: 1px 1px 2px black, 0 0 25px whitesmoke, 0 0 5px #000066; font-size: 30px;">Find Your Graffiti</p>
+      <p style = "color: #000066; text-shadow: 1px 1px 2px black, 0 0 25px whitesmoke, 0 0 5px #000066; font-size: 30px;">Find Graffiti in Your Zip Code</p>
     </div>
     <div class="container">
       <div class="row margin-top-50">
@@ -36,13 +36,17 @@
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="mm/dd/yyyy">
+                        <!-- <label for="date">Enter a Date</label> -->
+                        <label for="date">Your Zip Code</label>
+                        <!-- <input class="form-control" id="datetime" type="text" placeholder="mm/dd/yyyy"> -->
+                        <input class="form-control" id="zipcode" type="text" placeholder="00000">
                       </li>
                     </ul>
                   </div>
                   
                   <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <button id="reset-btn" type="reset" class="btn btn-default btn-lg btn-block">Reset Table</button>
+
                  
                 </form>
               </div>
@@ -66,7 +70,7 @@
                   <th class="table-head">Police District</th>
                   <th class="table-head">Community Area</th>
                   <th class="table-head">Latitude</th>
-                  <th class="table-head">Longitude</th>
+                  <th class="table-head">ongitude</th>
                 </tr>
               </thead>
               <tbody></tbody>
@@ -76,7 +80,7 @@
       </div>
     </div>
     <footer class="footer" style= "text-align: center;">
-      <span class="bottom" style="font-family: 'Michroma', sans-serif;">UFO Sightings</span>
+      <span class="bottom" style="font-family: 'Michroma', sans-serif;">Graffiti Finder</span>
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>

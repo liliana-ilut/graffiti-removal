@@ -12,10 +12,7 @@
   
   /* Make button more visible */
   .btn{
-    background-color: #000066; 
-    position: absolute;
-    right: 50px;
-    left: 40px;
+    background-color: rgba(97, 141, 27, 0.322)
   }
   
   
@@ -109,7 +106,7 @@
     padding: 20px;
     margin: 0;
     background: black;
-    background-image: url("../images/ufo2.jpg");
+    background-image: url("../img/lovechicago.jpg");
     background-attachment: fixed;
     background-position: bottom center;
     background-size: cover;
