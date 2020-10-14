@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>GraffitiRemovalFinder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/styletable.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!-- <a class="navbar-brand" href="indextable.html">Graffiti -->
+    
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1 style = "color:rgb(159, 247, 44); text-shadow: 1px 1px 25px rgb(24, 41, 3), 0 0 25px whitesmoke, 0 0 25px rgb(5, 8, 1); font-size: 100px;">Find Graffiti in Your Zip Code</h1>
+      <!-- <p style = "color:rgb(159, 247, 44); text-shadow: 1px 1px 2px rgb(159, 247, 44), 0 0 25px whitesmoke, 0 0 5px rgb(5, 8, 1); font-size: 100px;">Find Graffiti in Your Zip Code</p> -->
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="zipcode">Your Zip Code</label>
+                        <input class="form-control" id="zipcode" type="text" placeholder="606--">
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <button id="reset-btn" type="reset" class="btn btn-default btn-lg btn-block">Reset Table</button>
+
+                 
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="graffiti-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Status</th>
+                  <th class="table-head">Completion Date</th>
+                  <th class="table-head">Service Request Number</th>
+                  <th class="table-head">Type of Service Request</th>
+                  <th class="table-head">Graffiti Surface</th>
+                  <th class="table-head">Graffiti Spot</th>
+                  <th class="table-head">Street Address</th>
+                  <th class="table-head">Zip Code</th>
+                  <th class="table-head">Ward</th>
+                  <th class="table-head">Police District</th>
+                  <th class="table-head">Community Area</th>
+                  <th class="table-head">Latitude</th>
+                  <th class="table-head">Longitude</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer" style= "text-align: center;">
+      <span class="bottom" style="font-family: 'Michroma', sans-serif;">Graffiti Finder</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="static/js/tables.js"></script>
+</body>
+
+</html>
