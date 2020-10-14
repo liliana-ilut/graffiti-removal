@@ -15,7 +15,9 @@
   /* Make button more visible */
   .btn{
     background-color: rgb(159, 247, 44);
-    position: center;
+    /* position: absolute; */
+    /* right : 50px;
+    left: 40px; */
     
   }
   
