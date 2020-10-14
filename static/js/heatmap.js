@@ -15,7 +15,7 @@ var myMap = L.map("map", {
 
   
   
-  let url= "https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000";
+  let url= "/api";
   d3.json(url).then(function(response) {
   
     console.log(response);
@@ -23,11 +23,12 @@ var myMap = L.map("map", {
     var heatArray = [];
   
     for (var i = 0; i < response.length; i++) {
-      var location = response[i].location;
+      var lat = response[i].latitude;
+      var lng = response[i].longitude;
   
-      if (location) {
-        heatArray.push([location.latitude, location.longitude]);
-      }
+      
+        heatArray.push([lat, lng]);
+    
     }
     console.log(heatArray);
     var heat = L.heatLayer(heatArray, {
