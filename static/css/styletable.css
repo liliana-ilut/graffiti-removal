@@ -1,18 +1,12 @@
 /* picture image source https://www.bombingscience.com/graffiti-pictures/city/chicago/artist/meeting-of-styles-2014 */
 /* https://www.graffitiremovalindetroit.com/before-after/ */
 
-/* /* Import fonts */
-/* @import url('https://fonts.googleapis.com/css?family=Space+Mono:700'); */
-/* @import url('https://fonts.googleapis.com/css?family=Lato'); */
-/* @import url('https://fonts.googleapis.com/css?family=Michroma'); */
-/* @import url('https://fonts.googleapis.com/css?family=Karla'); */
-
 html,
 body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background-color: rgb(64, 91, 211);
+  background-color: rgb(131, 150, 233);
 }
 
 *{
@@ -77,16 +71,11 @@ div .panel-body{
 }
 
 ul #filters{
-  background-color: black !important; 
+  background-color: black !important;
+  position: relative; 
 }
   
   /* Adding styles to the aside and filter form */
-  .ufo-form {
-    margin-top: 50px;
-
-
-  }
-  
   .filters .panel-body {
     padding: 0;
   }
@@ -105,6 +94,8 @@ ul #filters{
   
   #table-area th {
     text-align: center;
+    background-color: whitesmoke;
+    color: black;
   }
   
   #table-area th:first-child,
