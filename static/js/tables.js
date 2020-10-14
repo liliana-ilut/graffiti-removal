@@ -1,7 +1,7 @@
 var baseURL = "https://data.cityofchicago.org/resource/hec5-y4x5.json?";
 var date = "$where=creation_date between '2018-11-06T00:00:00.000' and '2018-12-18T00:00:00.000'";
 var status = "&status=Completed";
-var limit = "&$limit=100";
+var limit = "&$limit=10";
 
 // Assemble API query URL
 var url = baseURL + date + status + limit;
