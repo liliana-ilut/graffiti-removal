@@ -1,3 +1,5 @@
+/* picture image source https://www.bombingscience.com/graffiti-pictures/city/chicago/artist/meeting-of-styles-2014 */
+
 * {
     box-sizing: border-box;
     font-family: Ubuntu, sans-serif;
@@ -14,11 +16,11 @@
   
   /* Make button more visible */
   .btn{
-    background-color: rgb(159, 247, 44);
-    /* position: absolute; */
+    background-color: rgb(214, 112, 29);
+    position: center;
+    text-align-last: right;
     /* right : 50px;
     left: 40px; */
-    
   }
   
   
@@ -55,19 +57,19 @@
     margin: 0;
   }
   
-  /* This CSS styles the ufo icon in the navbar */
+  /* This CSS styles the ufo icon in the navbar
   .nav-ufo {
     position: absolute;
     bottom: 5px;
     left: 150px;
     width: 35px;
     color: white;
-  }
+  } */
   
-  /* Adding styles to the aside and filter form */
+  /* Adding styles to the aside and filter form
   .ufo-form {
     margin-top: 50px;
-  }
+  } */
   
   .filters .panel-body {
     padding: 0;
@@ -81,13 +83,13 @@
     display: block;
     width: 100%;
     padding: 8px;
-    color: #8e979f;
+    color: #e740f3;
     outline: none;
   }
   
   #table-area th {
     text-align: center;
-    background-color: #1b1b641c;
+    background-color: #f0481d1c;
     color: white;
   }
   
@@ -112,7 +114,7 @@
     padding: 20px;
     margin: 0;
     background: rgb(216, 11, 11);
-    background-image: url("../img/lovechicago.jpg");
+    background-image: url("../img/before_after.jpg");
     background-attachment: fixed;
     background-position: bottom center;
     background-size: cover;
@@ -167,7 +169,7 @@
     #table-area tr td:first-child {
       font-size: 1.8em;
       font-weight: bold;
-      background: #2c2f31;
+      background: #8ecf24;
     }
   
     #table-area tr td:last-child {
