@@ -34,7 +34,7 @@ app = Flask(__name__)
 # Home Page
 @app.route("/")
 def home():
-   return """!DOCTYPE html>
+   return """<!DOCTYPE html>
 <html lang="en">
 
 <head>
