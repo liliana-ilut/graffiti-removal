@@ -34,42 +34,51 @@ app = Flask(__name__)
 # Home Page
 @app.route("/")
 def home():
-    # return render_template("home.html")
-    return """
-    <!DOCTYPE html>
+   return """!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Graffiti Removal</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+
 <!-- nav bar -->
   <div class="navigation">
     <div class="row">
-      <div class="col-3" style="background-color: rgb(124, 132, 240)">
+      <div class="col-2" style="background-color: rgb(124, 132, 240)">
         <a href="/api" class="btn" role="button" aria-pressed="true"><strong>API</strong></a>
       </div>
-          <div class="col-3" style="background-color: rgb(124, 132, 240)">
+          <div class="col-2" style="background-color: rgb(124, 132, 240)">
             <a href="/clustermap" class="btn" role="button" aria-pressed="true"><strong>Cluster Map</strong></a>
           </div>
-          <div class="col-3" style="background-color: rgb(124, 132, 240)">
+          <div class="col-2" style="background-color: rgb(124, 132, 240)">
             <a href="/heatmap" class="btn" role="button" aria-pressed="true"><strong>Heat Map</strong></a>
           </div>
-          <div class="col-3" style="background-color: rgb(124, 132, 240)">
+          <div class="col-2" style="background-color: rgb(124, 132, 240)">
             <a href="/table" class="btn" role="button" aria-pressed="true"><strong>Table</strong></a>
           </div>
+          <div class="col-2" style="background-color: rgb(124, 132, 240)">
+            <a href="/plot" class="btn" role="button" aria-pressed="true"><strong>Plot</strong></a>
+          </div>
+          <div class="col-2" style="background-color: rgb(124, 132, 240)"></div>
+
     
 </head>
+
 <body>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="box">
-          <h1><b>Graffiti Removal In Chicago</b></h1>
+          
+          <h1 id='demo' style="color:  #34ebcf"><b>Graffiti Removal In Chicago</b></h1>
           <hr/>
           
-          <p>In this project, we examined requests for graffiti removal to 311 from 2011-2019. The data is examined through a heat map, a cluster map, and charts. 
+          <p style= "background-color: rgb(124, 132, 240)">In this project, we examined requests for graffiti removal to 311. The raw csv was cleaned using pandas and sent to a sql database. The database runs 
+            through a flask map. The data is examined through a variety of ways including a cluster map, heat map, filterable table based on zipcode, and a plot of 
+            graffiti removal requests over time. 
               You can use the nav bar to select the visualizations or an API of the cleaned data.  
           </p>
         
@@ -79,10 +88,12 @@ def home():
       <div class="col-md-12">
         <div class="box">
           <hr/>
-           <img src="static/img/Chicago.jpg" alt="Chicago Graffiti" >
+           <img src="static/img/Chicago.jpg" alt="Chicago Graffiti" alignment="center">
         </div>
       </div>
     </div>
+    <!-- <script src="path/to/shine.min.js"></script> -->
+    <script src="static/js/circletype.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
@@ -92,8 +103,11 @@ def home():
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
+      <script src="static/js/home.js"></script>
 </body>
+
 </html>
+
 """
  #API Page
 @app.route("/api")
@@ -187,7 +201,7 @@ def table():
 <html>
 <head>
   <meta charset="utf-8">
-  <title>GraffitiRemovalFinder</title>
+  <title id="h2">GraffitiRemovalFinder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
