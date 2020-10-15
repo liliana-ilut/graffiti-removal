@@ -1,6 +1,6 @@
 /* global Plotly */
 var url =
-  `https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=1000`;
+  `https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000`;
 /**
  * Helper function to select data
  * Returns an array of values
@@ -47,9 +47,9 @@ function buildPlot() {
       x: Object.keys(counts),
       y: Object.values(counts),
       // y: endDate,
-      // line: {
-      color: "#17BECF"
-      // }
+      line: {
+      color: "##17becf"
+      }
     };
     var data = [trace1];
     var layout = {};
