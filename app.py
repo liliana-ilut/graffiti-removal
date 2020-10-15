@@ -238,6 +238,8 @@ def table():
             <table id="graffiti-table" class="table table-striped">
               <thead>
                 <tr>
+                  <th class="table-head">Service Request Number</th>
+                  <th class="table-head">Creation Date</th>
                   <th class="table-head">Status</th>
                   <th class="table-head">Completion Date</th>
                   <th class="table-head">Graffiti Surface</th>
@@ -249,6 +251,7 @@ def table():
                   <th class="table-head">Community Area</th>
                   <th class="table-head">Latitude</th>
                   <th class="table-head">Longitude</th>
+                  <th class="table-head">Location</th>
                 </tr>
               </thead>
               <tbody></tbody>
