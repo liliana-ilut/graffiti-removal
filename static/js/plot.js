@@ -1,6 +1,6 @@
 /* global Plotly */
 var url =
-  `https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000`;
+  `https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=100000`;
 /**
  * Helper function to select data
  * Returns an array of values
@@ -42,27 +42,28 @@ function buildPlot() {
     var data = [trace1];
     var layout = {
       title: {
-        text: "Graffiti Complaints",
+        text: "Graffiti Removal Requests",
         font: {
-          family: "Courier New, monospace",
-          size: 24
+          family: "Calibri",
+          size: 24,
+          color: '#7f7f7f'
         }
       },
-      xaxis: {
-        title: {
-          text: 'Months',
-          font: {
-            family: 'Courier New, monospace',
-            size: 18,
-            color: '#7f7f7f'
-          }
-        },
-      },
+      // xaxis: {
+      //   title: {
+      //     text: 'Months',
+      //     font: {
+      //       family: 'Calibri',
+      //       size: 18,
+      //       color: '#7f7f7f'
+      //     }
+      //   },
+      // },
       yaxis: {
         title: {
-          text: 'Number of Complaints',
+          text: 'Number of Requests',
           font: {
-            family: 'Courier New, monospace',
+            family: 'Calibri',
             size: 18,
             color: '#7f7f7f'
           }
