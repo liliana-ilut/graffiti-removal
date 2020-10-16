@@ -21,49 +21,49 @@ The goal of this project is to explore the data, observe trends, and tell a stor
 
 ### Requirements 
 
-1. Our visualization includes a Python Flask–powered RESTful API, HTML/CSS, JavaScript, and SQL database. 
+1. Our project includes a Python Flask–powered RESTful API, HTML/CSS, JavaScript, and SQL database. 
 
-2. Our project contains: 
+2. Pandas was used to scrap, clean, and push the data to a SQL database. 
+
+3. Our project contains: 
 
   
 
-### 2.1. A dynamic line graph that displays the number and the date of graffiti removal requests. 
+### 3.1. A dynamic line graph that displays the number and the date of graffiti removal requests. 
 
 This graph was created using D3.js library. 
 
-        ![LinePLot](static/img/line_plot.png) 
+![LinePLot](static/img/line_plot.png) 
 
   
 
-### 2.2. An interactive table that filters the graffiti based on your ZIP code.  
+### 3.2. An interactive table that filters the graffiti based on your ZIP code.  
 
 Table was created using HTML/CSS. 
 
-        ![Table](static/img/table.png) 
+![Table](static/img/table.png) 
 
   
 
-### 2.3. One Cluster Map that shows the address and the graffiti spot. 
+### 3.3. One Cluster Map that shows the address and the graffiti spot. 
 
 The map was created using Leaflet library. 
 
-        ![ClusterMap](static/img/cluster_map.png) 
+![ClusterMap](static/img/cluster_map.png) 
 
   
 
-### 2.4. One Heat Map that shows the area that have the highest number of graffiti complaints.  
+### 3.4. One Heat Map that shows the area that have the highest number of graffiti complaints.  
 
 The map was created using Leaflet library. 
 
-        ![HeatMap](static/img/heat_map.png) 
+![HeatMap](static/img/heat_map.png) 
 
          
 
-         
+4. The Dashboard page contains a Navigation Bar with buttons for all the maps, table, chart and the API data. 
 
-3. The Dashboard page contains a Navigation Bar with buttons for all the maps, table, chart and the API data. 
+5. We included a new Java Script library, CircleType.js, that allows us to curve text on our homepage. 
 
-4. Our project includes CircleType.js -- a new Java Script library that allowed us to curve the title from the home page. 
 
-5. Pandas was used to scrap, clean, and push the data to a SQL database. 
 
