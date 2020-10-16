@@ -1,6 +1,6 @@
 /* global Plotly */
 var url =
-  `https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=100000`;
+  `https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000`;
 /**
  * Helper function to select data
  * Returns an array of values

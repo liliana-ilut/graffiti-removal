@@ -4,3 +4,5 @@ Project 2 Contributors:
 - Quentin Sloboda
 - Vasil Nenov
 - Liliana Ilut
+
+![Graffiti](https://media.giphy.com/media/3o6fITIGbYys34HW6s/giphy.gif)

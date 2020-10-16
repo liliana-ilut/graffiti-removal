@@ -88,7 +88,8 @@ def home():
       <div class="col-md-12">
         <div class="box">
           <hr/>
-           <img src="static/img/Chicago.jpg" alt="Chicago Graffiti" alignment="center">
+            <img src="static/img/Chicago.jpg" alt="Chicago Graffiti" alignment="center"> 
+          <!--<iframe src="https://giphy.com/embed/3o6fITIGbYys34HW6s" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/graffiti-spraypaint-pierregof-3o6fITIGbYys34HW6s">via GIPHY</a></p>-->
         </div>
       </div>
     </div>
