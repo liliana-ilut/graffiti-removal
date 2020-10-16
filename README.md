@@ -18,4 +18,8 @@ The goal of this project is to explore the data, observe trends, tell a story th
 1. Our visualization includes a Python Flask–powered RESTful API, HTML/CSS, JavaScript, and SQL database.
 2. Our project contains 
         2.1.One Cluster Map and One Heat Map, that were created using Leaflet library.
-        
+        ![ClusterMap](static/img/cluster_map.png)
+        ![HeatMap](static/img/heat_map.png)
+        ![Table](static/img/table.png)
+        ![LinePLot](static/img/line_plot.png)
+
