@@ -1,4 +1,4 @@
-# graffiti-removal
+# graffiti-removal in Chicago
 ## Team: “Word on the Street”
 Team Members: 
     Katie Young,
@@ -17,15 +17,24 @@ The goal of this project is to explore the data, observe trends, tell a story th
 ### Requirements
 1. Our visualization includes a Python Flask–powered RESTful API, HTML/CSS, JavaScript, and SQL database.
 2. Our project contains:
-        2.1.One Cluster Map that was created using Leaflet library;
-        ![ClusterMap](static/img/cluster_map.png)
-        2.2.One Heat Map that was created using Leaflet library
-        ![HeatMap](static/img/heat_map.png)
-        2.3. An interactive table that filters the graffiti based on your zipcode;
-        ![Table](static/img/table.png)
-        2.4. A dinamic line graph that displays the number and the date of graffiti removal requests. This graph was created using D3.js library.
+
+### 2.1. A dinamic line graph that displays the number and the date of graffiti removal requests.
+This graph was created using D3.js library.
         ![LinePLot](static/img/line_plot.png)
 
+### 2.2. An interactive table that filters the graffiti based on your zipcode. 
+Table was created using HTML/CSS
+        ![Table](static/img/table.png)
+
+### 2.3.One Cluster Map that shows the address and the graffiti spot.
+The map was created using Leaflet library;
+        ![ClusterMap](static/img/cluster_map.png)
+
+### 2.4.One Heat Map that shows the area that have the highest number of graffiti complaints. 
+The map was created using Leaflet library
+        ![HeatMap](static/img/heat_map.png)
+        
+        
 3. The Dasboard page contains a Navigation Bar with buttons for all the maps, table, chart and the API data.
 4. Our project includes CircleType.js -- a new Java Script library that allowed us to curve the title from the home page.
 
