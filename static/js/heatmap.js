@@ -34,7 +34,12 @@ d3.json(url).then(function(response) {
   L.heatLayer(heatArray, {
     radius: 20,
     blur: 25,
-    gradient: {0.4: 'blue', 0.6: 'purple', 0.2: 'green', 0.9: 'yellow', 1: 'red' }
+    gradient: {
+      0.5: 'blue', 
+      0.6: 'purple', 
+      0.2: 'green', 
+      0.9: 'yellow', 
+      1.0: 'red' }
 
   }).addTo(myMap);
 
