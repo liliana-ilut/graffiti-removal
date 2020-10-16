@@ -265,7 +265,6 @@ def table():
                   <th class="table-head">Community Area</th>
                   <th class="table-head">Latitude</th>
                   <th class="table-head">Longitude</th>
-                  <th class="table-head">Location</th>
                 </tr>
               </thead>
               <tbody></tbody>
