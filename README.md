@@ -19,15 +19,11 @@ The goal of this project is to explore the data, observe trends, tell a story th
 2. Our project contains:
         2.1.One Cluster Map that was created using Leaflet library;
         ![ClusterMap](static/img/cluster_map.png)
-
-        2.2.One Heat Map that was created using Leaflet library;
+        2.2.One Heat Map that was created using Leaflet library
         ![HeatMap](static/img/heat_map.png)
-
         2.3. An interactive table that filters the graffiti based on your zipcode;
         ![Table](static/img/table.png)
-
         2.4. A dinamic line graph that displays the number and the date of graffiti removal requests. This graph was created using D3.js library.
-
         ![LinePLot](static/img/line_plot.png)
 
 3. The Dasboard page contains a Navigation Bar with buttons for all the maps, table, chart and the API data.
