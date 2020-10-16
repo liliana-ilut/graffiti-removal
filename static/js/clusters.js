@@ -44,7 +44,7 @@ d3.json(url).then(function(response) {
 
       // Add a new marker to the cluster group and bind a pop-up
       markers.addLayer(L.marker([lat, lng])
-        .bindPopup("<h4>" + "Street Address: " + addr + "</h4><h4> Graffiti Spot: </h4>" + "<h3>" + spot + "</h3>"));
+        .bindPopup("<h5>" + "Street Address: " + "</h5>" + "<h4>" + addr + "</h4><h5> Graffiti spot: </h5>" + "<h4>" + spot + "</h>"));
         // .bindPopup(spotString));
       //console.log(response[i].location)
     }
