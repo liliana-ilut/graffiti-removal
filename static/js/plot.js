@@ -1,6 +1,6 @@
 /* global Plotly */
 var url =
-  `https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=10000`;
+  `https://data.cityofchicago.org/resource/hec5-y4x5.json?$limit=100000`;
 /**
  * Helper function to select data
  * Returns an array of values
@@ -49,16 +49,16 @@ function buildPlot() {
           color: '#7f7f7f'
         }
       },
-      // xaxis: {
-      //   title: {
-      //     text: 'Months',
-      //     font: {
-      //       family: 'Calibri',
-      //       size: 18,
-      //       color: '#7f7f7f'
-      //     }
-      //   },
-      // },
+      xaxis: {
+        title: {
+          text: 'Date',
+          font: {
+            family: 'Calibri',
+            size: 18,
+            color: '#7f7f7f'
+          }
+        },
+      },
       yaxis: {
         title: {
           text: 'Number of Requests',
