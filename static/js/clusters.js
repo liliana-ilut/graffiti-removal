@@ -30,17 +30,22 @@ d3.json(url).then(function(response) {
     // Set the data location property to a variable
     var lat = response[i].latitude;
     var lng = response[i].longitude;
+    var addr = response[i].address;
+    var spot= response[i].graffiti_spot;
    
 
     // Check for location property
     
-      var locationString = "Latitude: " + lat + ", Longitude:" + lng;
+      // var locationString = "Latitude: " + lat + ", Longitude:" + lng;
+      // var addressString = "Street Address: " + addr;
+      // var spotString = "Graffiti Spot: " + spot;
       
   
 
       // Add a new marker to the cluster group and bind a pop-up
       markers.addLayer(L.marker([lat, lng])
-        .bindPopup(locationString));
+        .bindPopup("<h4>" + "Street Address: " + addr + "</h4><h4> Graffiti Spot: </h4>" + "<h3>" + spot + "</h3>"));
+        // .bindPopup(spotString));
       //console.log(response[i].location)
     }
 
