@@ -10,7 +10,6 @@ let button = d3.select("#filter-btn");
 let inputField1 = d3.select("#zipcode");
 let tbody = d3.select("tbody");
 var resetbtn = d3.select("#reset-btn");
-// let columns = ["creation_date", "status", "status", "completion_date", "service_request_number", "durationMinutes", "type_of_service_request", "what_type_of_surface_is_the_graffiti_on_", "where_is_the_graffiti_located_", "street_address", "zip_code", "x_coordinate", "y_coordinate", "ward", "police_district", "community_area", "ssa", "latitude", "longitude", "location"]
 let columns = ["index","creation_date", "status", "completion_date" ,"surface_type", "graffiti_spot", "address", "zipcode", "ward", "police_district", "community_area", "latitude", "longitude"];
 
 
