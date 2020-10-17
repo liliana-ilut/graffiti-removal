@@ -1,5 +1,4 @@
 /* picture image source https://www.bombingscience.com/graffiti-pictures/city/chicago/artist/meeting-of-styles-2014 */
-/* https://www.graffitiremovalindetroit.com/before-after/ */
 
 html,
 body {
@@ -24,11 +23,7 @@ body {
     from { transform: translate3d(0, -50px, 0);     }
     to   { transform: translate3d(0, 0px, 0); }
   }
-  /* div .navbar{
-    background-color: black !important; 
-    border-bottom-style: groove; 
-    border-bottom-color: #618D1B; 
-  } */
+  
   /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
   .wrapper {
     position: relative;
